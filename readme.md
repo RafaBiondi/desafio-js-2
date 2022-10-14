@@ -1,6 +1,6 @@
 Explicação do código do desafio:
 
-<!-- Aqui nós temos uma variável no formato de array recebendo objetos, que são os alunos e suas respectivas notas -->
+    <!-- Aqui nós temos uma variável no formato de array recebendo objetos, que são os alunos e suas respectivas notas -->
 let students = [
     {
         name: 'João',
@@ -24,13 +24,13 @@ let students = [
     }
 ]
 
-<!-- Logo abaixo, criei essa função chamada Média, que recebe como parâmetros a note1 e note2 (são duas variáveis, porém, essas variáveis serão/foram criadas no escopo da função) -->
+    <!-- Logo abaixo, criei essa função chamada Média, que recebe como parâmetros a note1 e note2 (são duas variáveis, porém, essas variáveis serão/foram criadas no escopo da função) -->
 function media (note1, note2) {
     <!-- Dentro da função, estamos retornando o cálculo da média ((note1 + note2) / ), todavia, são duas variáveis vazias até então, pois não estão recebendo nenhum valor até o momento -->
     return ((note1 + note2) / 2)
 }
 
-<!-- Novamente uma função foi criada, porém, essa função foi um pouco mais complexa para mim. Aqui criei a função studentMedia, focada em informar as informações do aluno, sua média e se ele foi aprovado ou não. (Aqui entre os parênteses, foi criada a variável student, que até então, está vazia) -->
+        <!-- Novamente uma função foi criada, porém, essa função foi um pouco mais complexa para mim. Aqui criei a função studentMedia, focada em informar as informações do aluno, sua média e se ele foi aprovado ou não. (Aqui entre os parênteses, foi criada a variável student, que até então, está vazia) -->
 function studentMedia (student) {
     if (media(student.firstNote, student.secondNote) >= 7) {
         <!-- Dentro da função, criei um fluxo da aplicação, uma estrutura condicional -->
@@ -48,9 +48,9 @@ function studentMedia (student) {
 
 }
 
-<!-- E aqui temos uma estrutura de repetição, com o intuito de repetir todas as funções e "impressões" na tela para cada um dos estudantes do array -->
+    <!-- E aqui temos uma estrutura de repetição, com o intuito de repetir todas as funções e "impressões" na tela para cada um dos estudantes do array -->
 for (let student of students) {
-   <!-- Com isso, criei uma variável chamada student e peguei ela de dentro da variável principal, students. Ou seja, a variável student estava pegando todos os objetos de dentro do array -->
+    <!-- Com isso, criei uma variável chamada student e peguei ela de dentro da variável principal, students. Ou seja, a variável student estava pegando todos os objetos de dentro do array -->
     let studentMessage = studentMedia(student)
 
     <!-- Acima, criei mais uma variável, a studentMessage, com o foco em mostrar no alert("") a mensagem, isso sendo feito com cada aluno. Ela recebeu a função studentMedia com o parâmetro sendo a variável (student). Com a função recebendo a student em seu parâmetro,  essa variável do for, foi atribuida ao student da função, que na realidade é uma outra variável que só funciona no escopo da função-->
@@ -60,5 +60,3 @@ for (let student of students) {
     <!-- E aqui, para encerrarmos, criei esse alert que recebia em seu parâmetro a variável studentMessage, facilitando assim, todo o processo de fazer aparecer na tela, dispensando diversos alert() -->
      
 }
-
-
